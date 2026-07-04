@@ -1,262 +1,238 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume - Shaik Kusnuth</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         body {
-            color: #2D3748; /* Dark Charcoal for better reading comfort */
-            background-color: #F7FAFC; /* Light gray page background */
-            margin: 0;
-            padding: 40px 20px;
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #e9eef4;
+            color: #333;
+            padding: 40px;
         }
-
         .resume-container {
-            width: 750px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 30px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Soft shadow for modern depth */
-            border-top: 6px solid #1A365D; /* Dark Navy Accent Border at top */
-            border-radius: 4px;
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
         }
-
         .header {
+            background: linear-gradient(135deg, #0d47a1, #1976d2);
+            color: white;
             text-align: center;
-            padding-bottom: 20px;
-            border-bottom: 2px solid #E2E8F0; /* Clean, modern divider color */
+            padding: 35px;
         }
-
-        h1 {
-            margin: 0;
-            font-size: 30px;
-            color: #1A365D; /* Deep Corporate Navy */
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
+        .header h1 {
+            font-size: 38px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
         }
-
         .contact-info {
-            font-size: 14px;
-            color: #4A5568; /* Slate Gray */
-            margin-top: 8px;
-            line-height: 1.6;
+            font-size: 15px;
+            line-height: 28px;
         }
-
         .contact-info a {
-            color: #2B6CB0; /* Royal Blue Links */
+            color: #fff;
             text-decoration: none;
-            font-weight: 600;
         }
-
-        .contact-info a:hover {
-            text-decoration: underline;
+        .content {
+            padding: 35px;
         }
-
-        h2 {
-            font-size: 16px;
-            color: #1A365D; /* Navy Section Headers */
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #0d47a1;
+            border-left: 6px solid #1976d2;
+            padding-left: 12px;
+            margin-bottom: 15px;
             text-transform: uppercase;
-            margin-top: 30px;
-            margin-bottom: 12px;
-            border-bottom: 2px solid #CBD5E0; /* Subdued accent line */
-            padding-bottom: 5px;
-            letter-spacing: 0.8px;
+            font-size: 22px;
         }
-
+        .section p {
+            line-height: 28px;
+            text-align: justify;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        ul li {
+            margin-bottom: 10px;
+            line-height: 26px;
+        }
         .item-title {
             font-weight: bold;
-            color: #2D3748;
-            font-size: 15px;
+            font-size: 18px;
+            color: #222;
+            margin-top: 15px;
         }
-
+        .item-title:first-of-type {
+            margin-top: 0;
+        }
         .item-sub {
+            color: #666;
             font-style: italic;
-            color: #718096; /* Muted slate for sub-details */
-            font-size: 13px;
+            margin: 5px 0 10px;
         }
-
-        p, ul {
-            font-size: 14px;
-            color: #2D3748;
-            margin: 0;
-            line-height: 1.5;
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        li {
-            margin-bottom: 6px;
-        }
-
-        li a {
-            color: #2B6CB0;
-            text-decoration: none;
-        }
-        
-        li a:hover {
-            text-decoration: underline;
-        }
-
         .highlight-text {
-            color: #B7791F; /* Sophisticated Amber for key callouts */
+            color: #ff9800;
+            font-weight: bold;
         }
-
-        /* Clean Table Styling */
         table {
             width: 100%;
             border-collapse: collapse;
-            color: #2D3748;
-            margin-top: 5px;
+            margin-top: 10px;
         }
-
-        table, th, td {
-            border: 1px solid #E2E8F0;
+        table th, table td {
+            padding: 12px;
+            border: 1px solid #ddd;
         }
-
-        th {
-            background-color: #EDF2F7; /* Light grayish-blue for headers */
-            color: #1A365D; /* Navy text in table header */
-            padding: 10px;
-            text-align: left;
-            font-size: 14px;
-            font-weight: bold;
+        table th {
+            background: #1976d2;
+            color: white;
         }
-
-        td {
-            padding: 10px;
-            text-align: left;
-            font-size: 13px;
+        table tr:nth-child(even) {
+            background: #f5f5f5;
         }
-        
-        tr:nth-child(even) {
-            background-color: #F8FAFC; /* Subtle zebra striping */
+        table tr:hover {
+            background: #e3f2fd;
+        }
+        a {
+            color: #1565c0;
+            text-decoration: none;
+        }
+        a:hover, .contact-info a:hover {
+            text-decoration: underline;
+            color: #0d47a1;
+        }
+        @media(max-width:768px) {
+            body { padding: 10px; }
+            .header h1 { font-size: 28px; }
+            .content { padding: 20px; }
+            table { font-size: 13px; }
         }
     </style>
 </head>
 <body>
-
 <div class="resume-container">
-
     <div class="header">
         <h1>Shaik Kusnuth</h1>
         <div class="contact-info">
-            Phone: <strong>+91 9014179419</strong> | Email: <a href="mailto:kusnuth.shaik24@sasi.ac.in">kusnuth.shaik24@sasi.ac.in</a>
-            <br>
+            Phone: <strong>+91 9014179419</strong> | Email: <a href="mailto:kusnuth.shaik24@sasi.ac.in">kusnuth.shaik24@sasi.ac.in</a><br>
             CodeChef: <a href="https://www.codechef.com/users/happy_sheen_43" target="_blank">happy_sheen_43</a> | West Godavari, Andhra Pradesh, India
         </div>
     </div>
-    <br>
-
-    <div>
-        <h2>Professional Summary</h2>
-        <p>
-            Motivated 3rd-year Computer Science Engineering student specializing in Artificial Intelligence & Machine Learning. Eager to leverage foundational programming skills in Python, C, and Web Development alongside practical internship experience to contribute to software applications.
-        </p>
-    </div>
-    <br>
-
-    <div>
-        <h2>Technical Skills</h2>
-        <ul>
-            <li><strong>Programming Languages:</strong> Python, C, JavaScript</li>
-            <li><strong>Web Technologies:</strong> HTML, CSS</li>
-            <li><strong>Core Concepts:</strong> Data Structures, Linked Lists, Basic Machine Learning</li>
-        </ul>
-    </div>
-    <br>
-
-    <div>
-        <h2>Campuses & Internship Experience</h2>
-        <div>
-            <span class="item-title">Cognifz / Cognizance IT Internship</span>
+    <div class="content">
+        <div class="section">
+            <h2>Professional Summary</h2>
+            <p>I am a 3rd-year B.Tech Computer Science student specializing in Artificial Intelligence and Machine Learning at Sasi Institute of Technology and Engineering. I have a solid understanding of C, Python, and JavaScript fundamentals with a strong interest in Web Development and Problem Solving.</p>
         </div>
-        <div class="item-sub">Software Development Intern</div>
-        <br>
-        <ul>
-            <li>Gained hands-on training with Python application development basics.</li>
-            <li>Applied data structure concepts to solve practical backend logic tasks.</li>
-            <li>Built minor software simulation tools as part of the training program.</li>
-        </ul>
-    </div>
-    <br>
-
-    <div>
-        <h2>Projects</h2>
-
-        <div>
-            <span class="item-title">Movie Recommendation System</span>
+        <div class="section">
+            <h2>Technical Skills</h2>
+            <ul>
+                <li><b>Programming Languages:</b> Python, C, JavaScript</li>
+                <li><b>Web Technologies:</b> HTML, CSS</li>
+                <li><b>Core Concepts:</b> Data Structures, Linked Lists, Basic Machine Learning</li>
+            </ul>
         </div>
-        <div class="item-sub">Internship Project</div>
-        <br>
-        <p>
-            Developed a basic Python application that suggests films based on user preferences and user ratings data frameworks.
-        </p>
-        <br>
-
-        <div>
-            <span class="item-title">AI Chatbot Application</span>
+        <div class="section">
+            <h2>Strengths</h2>
+            <ul>
+                <li>Quick Learner</li>
+                <li>Adaptability</li>
+                <li>Problem Solving</li>
+                <li>Team Work</li>
+                <li>Communication Skills</li>
+            </ul>
         </div>
-        <div class="item-sub">Internship Project</div>
-        <br>
-        <p>
-            Created a functional automated text responder framework using Python logic scripts to reply efficiently to user commands.
-        </p>
+        <div class="section">
+            <h2>Internship Experience</h2>
+            <div class="item-title">Cognifz / Cognizance IT Internship</div>
+            <div class="item-sub">Software Development Intern</div>
+            <ul>
+                <li>Worked on Python application development.</li>
+                <li>Applied Data Structure concepts in backend logic.</li>
+                <li>Developed mini software projects during training.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Projects</h2>
+            <div class="item-title">Movie Recommendation System</div>
+            <div class="item-sub">Internship Project</div>
+            <p>Developed a Python application that recommends movies according to user interests using rating datasets.</p>
+            <div class="item-title">AI Chatbot Application</div>
+            <div class="item-sub">Internship Project</div>
+            <p>Developed a chatbot using Python capable of automatically responding to user queries.</p>
+        </div>
+        <div class="section">
+            <h2>Hackathons & Activities</h2>
+            <ul>
+                <li>
+                    <b>Google Hackathon Participant (As Group - Prototyping):</b> Developed a 
+                    <a href="https://kulsumshaik24-cmyk.github.io/volunteer-connect-prototype/" target="_blank" class="highlight-text">Smart Resource Allocation System</a> using AI concepts.
+                </li>
+                <li><b>CodeChef Learner:</b> Practicing C, Python, DSA and solving coding problems regularly.</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Certifications</h2>
+            <ul>
+                <li>AWS Fundamentals</li>
+                <li>Cambridge English Certification</li>
+                <li>CodeChef - Programming in C</li>
+                <li>CodeChef - Programming in Python</li>
+                <li>CodeChef - Data Structures & Linked Lists</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Languages</h2>
+            <ul>
+                <li>English</li>
+                <li>Telugu</li>
+                <li>Hindi</li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Education</h2>
+            <table>
+                <tr>
+                    <th>Qualification</th>
+                    <th>Institute</th>
+                    <th>Year</th>
+                    <th>Score</th>
+                </tr>
+                <tr>
+                    <td>B.Tech (CSE-AI & ML)</td>
+                    <td>Sasi Institute of Technology & Engineering</td>
+                    <td>2023-Present</td>
+                    <td>Pursuing</td>
+                </tr>
+                <tr>
+                    <td>Intermediate (MPC)</td>
+                    <td>Sasi Junior College</td>
+                    <td>2023</td>
+                    <td>94%</td>
+                </tr>
+                <tr>
+                    <td>SSC</td>
+                    <td>Sasi English Medium School</td>
+                    <td>2021</td>
+                    <td>89.99%</td>
+                </tr>
+            </table>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <p style="font-size: 20px;"><strong>"Building intelligent solutions through code and AI."</strong></p>
+        </div>
     </div>
-    <br>
-
-    <div>
-        <h2>Hackathons & Extracurriculars</h2>
-        <ul>
-            <li><strong>Google Hackathon Participant:</strong> Developed a <span class="highlight-text"><strong>Smart Resource System</strong></span> project in a team environment, focusing on real-world problem-solving methodologies and efficient system logic.</li>
-            <li><strong>CodeChef Active Learner:</strong> Regularly practice algorithmic problems focused on Data Structures, Linked Lists, C, and Python syntax. (Profile: <a href="https://www.codechef.com/users/happy_sheen_43" target="_blank">happy_sheen_43</a>)</li>
-        </ul>
-    </div>
-    <br>
-
-    <div>
-        <h2>Certifications</h2>
-        <ul>
-            <li>AWS Fundamentals Training/Certification</li>
-            <li>Cambridge English Certification</li>
-            <li>CodeChef Certifications: Programming in C & Python</li>
-            <li>CodeChef Certificates in Data Structures and Linked Lists</li>
-        </ul>
-    </div>
-    <br>
-
-    <div>
-        <h2>Education</h2>
-        <table>
-            <tr>
-                <th>Qualification / Degree</th>
-                <th>Institute / School</th>
-                <th>Year</th>
-                <th>Score</th>
-            </tr>
-            <tr>
-                <td><b>B.Tech (CSE - AI & ML)</b></td>
-                <td>Sasi Institute of Technology & Engineering</td>
-                <td>2023 - Present</td>
-                <td>Pursuing (3rd Year)</td>
-            </tr>
-            <tr>
-                <td><b>Intermediate (MPC)</b></td>
-                <td>Sasi Junior College</td>
-                <td>Graduated: 2023</td>
-                <td>94%</td>
-            </tr>
-            <tr>
-                <td><b>SSC (10th)</b></td>
-                <td>Sasi English Medium School</td>
-                <td>Graduated: 2021</td>
-                <td>89.99%</td>
-            </tr>
-        </table>
-    </div>
-
 </div>
-
 </body>
 </html>
